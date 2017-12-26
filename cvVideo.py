@@ -20,8 +20,9 @@ def CatVideo():
 		if len(faceRects) > 0:            #大于0则检测到人脸      
 			print("测试1")                             
 			for faceRect in faceRects:  #单独框出每一张人脸
- 				x, y, w, h = faceRect        
- 				cv2.rectangle(frame, (x - 10, y - 10), (x + w + 10, y + h + 10), color, 3)
+				print(faceRect)
+				x, y, w, h = faceRect        
+				cv2.rectangle(frame, (x - 10, y - 10), (x + w + 10, y + h + 10), color, 3)
 		cv2.imshow("shibie",frame)
 		print("ceshi2")
 		if cv2.waitKey(10)&0xFF==ord('q'):
